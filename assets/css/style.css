@@ -52,3 +52,15 @@ figure, h2 {
     font-size: 2em;
     color: var(--text-light);
 }
+
+.categories{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1em;
+    padding: 1em;
+}
+
+.page-header{
+    background-image: url(../images/egypt.jpg);
+    background-size: cover;
+}
