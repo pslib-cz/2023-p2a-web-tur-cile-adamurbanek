@@ -1,5 +1,6 @@
 :root {
     --text-light: #000000;
+    --text-dark: #ffffff;
 }
 html {
     font-family: 'Open Sans', sans-serif;
@@ -50,7 +51,7 @@ figure, h2 {
 .heading--h1 {
     text-transform: uppercase;
     font-size: 2em;
-    color: var(--text-light);
+    color: var(--text-dark);
 }
 
 .categories{
@@ -63,4 +64,42 @@ figure, h2 {
 .page-header{
     background-image: url(../images/egypt.jpg);
     background-size: cover;
+}
+
+.categories__item{
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.categories__item-description{
+    background-color: none;
+    color: var(--text-dark);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.categories__item:hover{
+    transform: scale(1.05);
+    transition: transform ease 0.5s;
+}
+
+.categories:not(:has(a:hover)) img {
+    filter: blur(0px);
+}
+a.categories__item img{
+    filter: blur(4px);
+ 
+}
+a.categories__item:hover img{
+    filter: blur(0px);
+}
+
+.categories__item-description{
+    transition: bottom 0.3s ease, left 0.3s ease;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    white-space: nowrap;
 }
